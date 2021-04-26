@@ -19,7 +19,8 @@ public class MedicineController {
 
     /** Конструктор. */
     public MedicineController() {
-        medicineList = new CsvToBeanBuilder<Medicine>(new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv"))).withType(Medicine.class).build().parse();
+        medicineList = new CsvToBeanBuilder<Medicine>(new InputStreamReader(this.getClass()
+                .getResourceAsStream("/MOCK_DATA.csv"))).withType(Medicine.class).build().parse();
     }
 
     /**
